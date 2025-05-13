@@ -1,22 +1,23 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Map from "./components/Map";
-import Testimony from "./components/Testimony";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
+import "./App.css";
 function App() {
   return (
-    <>
-    <div className="relative w-screen h-screen bg-red">
-
-      <Navbar />
+    <div className="relative h-screen w-full bg-primary">
+      <div className="sticky top-0 z-50">
+        <Navbar />
+      </div>
       <Hero />
-      <Map />
-      <Testimony />
-      <Footer />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
-    </>
   );
 }
 
