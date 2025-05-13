@@ -13,9 +13,9 @@ function Navbar() {
   ];
 
   const logo = {
-    title: "Loteria Estesan",
+    title: "Loti Estesan",
     icon: logoUrl,
-    alt: "Logo de loteria estesan",
+    alt: "Logo de Loti Estesan",
   };
 
   const [isSelectMenu, setSelectMenu] = useState(false);
