@@ -1,12 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logoUrl from "../../assets/react.svg";
-import {
-  faBars,
-  faCircleInfo,
-  faHotTub,
-  faHouse,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHotTub, faHouse } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
 import { faResolving } from "@fortawesome/free-brands-svg-icons";
@@ -18,7 +12,11 @@ function Navbar() {
     { title: "Jugadas calientes", url: "#hot", icon: faHotTub },
   ];
 
-  const logo = { title: "Loteria Estesan", icon: logoUrl, alt: "Logo de loteria estesan" };
+  const logo = {
+    title: "Loteria Estesan",
+    icon: logoUrl,
+    alt: "Logo de loteria estesan",
+  };
 
   const [isSelectMenu, setSelectMenu] = useState(false);
   const [isNavbarHeight, setNavbarHeight] = useState("140px");
@@ -37,7 +35,7 @@ function Navbar() {
   return (
     <nav
       id="Navbar"
-      className=" fixed top-0 md:absolute w-full h-[max-content] p-1 flex flex-col gap-2 bg-primary/70 md:p-2 backdrop-blur-sm z-50"
+      className="absolute top-0 md:absolute w-full h-[max-content] p-1 flex flex-col gap-2 bg-primary/70 md:p-2 backdrop-blur-sm z-50"
     >
       <div className="md:container md:mx-auto w-full h-full flex flex-row justify-between items-center">
         <a
