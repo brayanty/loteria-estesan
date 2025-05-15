@@ -1,8 +1,8 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Slider from "./components/common/slider";
 
 import "./App.css";
-import Card from "./components/common/cardQR";
 function App() {
   return (
     <div className="relative h-screen w-full bg-primary">
@@ -10,7 +10,9 @@ function App() {
         <Navbar />
       </div>
       <Hero />
-      <br />
+      <div>
+        <Slider />
+      </div>
       <br />
       <br />
       <br />

@@ -1,16 +1,21 @@
 import styled from "styled-components";
 import lotinEstesant from "@assets/qrLotisan.svg";
-const Card = () => {
+const CardQR = () => {
   return (
     <StyledWrapper>
-      <div className="card w-1/4 h-1/4 flex flex-col items-center justify-center overflow-hidden">
-        <div className="w-full content">
-       <img className="h-40 w-40" src={lotinEstesant} alt="QR Lotin Estesan" />
+      <div className="card w-2/3 h-2/6 flex flex-col items-center justify-center overflow-hidden">
+        <div className="w-full h-full flex flex-col items-center justify-center content">
+          <div>
+            <img
+              className="h-40 w-40"
+              src={lotinEstesant}
+              alt="QR Lotin Estesan"
+            />
+          </div>
           <div className="description">
-            <p className="title text-2xl font-bold">
-              <strong>Lotin Estesan</strong>
+            <p className="title text-2xl text-black font-bold">
+              <strong>200.000.000 COP</strong>
             </p>
-            <p className="info">30 Min | 165 Sell</p>
           </div>
         </div>
       </div>
@@ -95,4 +100,4 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default Card;
+export default CardQR;

@@ -6,6 +6,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import CardQR from "../common/cardQR";
 
 function Hero() {
   const [isParagraph, SetParagraph] = useState(0);
@@ -18,51 +19,70 @@ function Hero() {
   }, [isParagraph]);
 
   return (
-    <section
-      className="bg-emerald-600 relative w-full h-[60vh] md:h-[90vh] flex max-md:flex-col"
-    >
-      <header className="container mx-auto w-full h-full flex flex-col justify-center md:justify-right items-start gap-12 p-2">
-        <h1 className="text-white text-center p-2 rounded-md text-7xl font-extrabold text-shadow-sm">
-          Loti Estesan
-        </h1>
-        <div>
-          {[0, 1, 2].map((i) => (
-            <p
-              key={i}
-              className={`text-white p-1 transition-all duration-300 ease-in-out rounded-md text-center text-2xl text-shadow-sm font-primaryMedium absolute ${
-                isParagraph === i ? "" : "opacity-0"
-              }`}
-            >
-              {i === 0 && "Registrate y empieza a disfrutar Loti Estesan"}
-              {i === 1 && "Disfruta de la mejor experiencia de juego en linea"}
-              {i === 2 && "Gana premios y recompensas todos los días"}
-            </p>
-          ))}
-        </div>
-        <div className="flex gap-4">
-           <button className="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-          <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-          <span className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
-            <div className="relative z-10 flex items-center space-x-2">
-              <span className="transition-all duration-500 group-hover:translate-x-1">Registrarse</span>
-              <svg className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" data-slot="icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path clipRule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" fillRule="evenodd" />
-              </svg>
-            </div>
-          </span>
-        </button>
-               <button className="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-          <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-          <span className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
-            <div className="relative z-10 flex items-center space-x-2">
-              <span className="transition-all duration-500 group-hover:translate-x-1">Conocer más</span>
-              <FontAwesomeIcon icon={faSearch} className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" />
-            </div>
-          </span>
-        </button>
-        </div>
-      </header>
-
+    <section className="bg-emerald-600 relative w-full h-[60vh] md:h-[90vh] flex max-md:flex-col ">
+      <div className="container mx-auto flex items-center justify-between w-full h-full relative">
+        <header className="w-full h-full flex flex-col justify-center md:justify-right items-start gap-12 p-2">
+          <h1 className="text-white text-center p-2 rounded-md text-7xl font-extrabold text-shadow-sm">
+            Loti Estesan
+          </h1>
+          <div>
+            {[0, 1, 2].map((i) => (
+              <p
+                key={i}
+                className={`text-white p-1 transition-all duration-300 ease-in-out rounded-md text-center text-2xl text-shadow-sm font-primaryMedium absolute ${
+                  isParagraph === i ? "" : "opacity-0"
+                }`}
+              >
+                {i === 0 && "Registrate y empieza a disfrutar Loti Estesan"}
+                {i === 1 &&
+                  "Disfruta de la mejor experiencia de juego en linea"}
+                {i === 2 && "Gana premios y recompensas todos los días"}
+              </p>
+            ))}
+          </div>
+          <div className="flex gap-4">
+            <button className="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+              <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <span className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
+                <div className="relative z-10 flex items-center space-x-2">
+                  <span className="transition-all duration-500 group-hover:translate-x-1">
+                    Registrarse
+                  </span>
+                  <svg
+                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </button>
+            <button className="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+              <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <span className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
+                <div className="relative z-10 flex items-center space-x-2">
+                  <span className="transition-all duration-500 group-hover:translate-x-1">
+                    Conocer más
+                  </span>
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                  />
+                </div>
+              </span>
+            </button>
+          </div>
+        </header>
+        <CardQR />
+      </div>
       <div
         className="absolute invisible md:visible bottom-0 w-full"
         style={{ height: "150px", overflow: "hidden" }}
