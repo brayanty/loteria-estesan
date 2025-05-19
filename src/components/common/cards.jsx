@@ -32,7 +32,7 @@ function Service() {
       <h3 className="text-center text-black text-4xl font-primarybold">
         Que encontrarás
       </h3>
-      <div className="text-base gap-2 grid grid-cols-1 sm:grid-cols-3 grid- ">
+      <div className="text-base gap-2 grid grid-cols-1 sm:grid-cols-3">
         {service.map((item, index) => {
           return (
             <article

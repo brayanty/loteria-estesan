@@ -4,12 +4,14 @@ import { faBars, faHotTub, faHouse } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
 import { faResolving } from "@fortawesome/free-brands-svg-icons";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const items = [
     { title: "inicio", url: "#home", icon: faHouse },
     { title: "Resultados", url: "#results", icon: faResolving },
     { title: "Jugadas calientes", url: "#hot", icon: faHotTub },
+    { title: "Preguntas frecuentes", url: "#faqs", icon: faQuestionCircle },
   ];
 
   const logo = {
@@ -35,7 +37,7 @@ function Navbar() {
   return (
     <nav
       id="Navbar"
-      className="absolute top-0 md:absolute w-full h-[max-content] p-1 flex flex-col gap-2 bg-primary/70 md:p-2 backdrop-blur-sm z-50"
+      className="absolute top-0 md:absolute w-full h-[max-content] p-1 flex flex-col gap-2 bg-green-500/70 md:p-2 backdrop-blur-sm z-50"
     >
       <div className="md:container md:mx-auto w-full h-full flex flex-row justify-between items-center">
         <a
@@ -72,7 +74,7 @@ function Navbar() {
             <li key={index}>
               <a
                 href={item.url}
-                className="rounded-lg px-4 py-2 text-md text-white font-semibold hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                className="rounded-lg px-4 py-2 text-[.75rem] text-white font-semibold hover:bg-slate-100 hover:text-slate-900 transition-colors"
                 aria-label={`Ir a ${item.title}`}
               >
                 <FontAwesomeIcon icon={item.icon} size="sm" /> {item.title}

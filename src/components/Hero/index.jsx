@@ -19,8 +19,8 @@ function Hero() {
   }, [isParagraph]);
 
   return (
-    <section className="bg-emerald-600 relative w-full h-[60vh] md:h-[90vh] flex max-md:flex-col ">
-      <div className="container mx-auto flex items-center justify-between w-full h-full relative">
+    <section className="bg-emerald-600 relative w-full h-[80vh] md:h-[100vh] flex max-md:flex-col ">
+      <div className="container mx-auto flex items-center justify-between relative">
         <header className="w-full h-full flex flex-col justify-center md:justify-right items-start gap-12 p-2">
           <h1 className="text-white text-center p-2 rounded-md text-7xl font-extrabold text-shadow-sm">
             Loti Estesan
@@ -81,7 +81,9 @@ function Hero() {
             </button>
           </div>
         </header>
-        <CardQR />
+        <div className="flex gap-10 items-center justify-between">
+          <CardQR />
+        </div>
       </div>
       <div
         className="absolute invisible md:visible bottom-0 w-full"
