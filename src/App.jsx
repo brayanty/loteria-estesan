@@ -5,6 +5,7 @@ import Map from "./components/common/map";
 
 import "./App.css";
 import Footer from "./components/Footer";
+import Cards from "./components/common/cards.jsx";
 function App() {
   return (
     <div className="relative bg-white flex flex-col gap-3">
@@ -37,6 +38,9 @@ function App() {
             ¡Te esperamos en Loti Estesan!
           </p>
         </div>
+      </div>
+      <div>
+        <Cards />
       </div>
       <div>
         <Map />
