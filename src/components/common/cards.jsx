@@ -28,7 +28,7 @@ function Service() {
   ];
 
   return (
-    <section className="bg-gray-400/50 p-5 flex gap-10 flex-col">
+    <section className="p-5 flex gap-10 flex-col">
       <h3 className="text-center text-black text-4xl">Que encontrarás</h3>
       <div className="text-base gap-2 grid grid-cols-1 sm:grid-cols-3">
         {service.map((item, index) => (

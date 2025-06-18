@@ -17,6 +17,7 @@ export default defineConfig({
       "@constants": path.resolve(__dirname, "src/constants"), // This will allow you to use '@constants' as an alias for 'src/constants'
       "@services": path.resolve(__dirname, "src/services"), // This will allow you to use '@services' as an alias for 'src/services'
       "@store": path.resolve(__dirname, "src/store"), // This will allow you to use '@store' as an alias for 'src/store'
+      "@common": path.resolve(__dirname, "src/components/common"), // This will allow you to use 'common' as an alias for 'src/components/common
     },
   },
   plugins: [react(), tailwindcss()],

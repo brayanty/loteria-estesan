@@ -6,7 +6,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import CardQR from "../common/cardQR";
+import CardQR from "./cardQR";
 
 function Hero() {
   const [isParagraph, SetParagraph] = useState(0);
@@ -96,7 +96,11 @@ function Hero() {
         >
           <path
             d="M-1.97,92.28 C149.99,150.00 349.20,-49.98 503.67,106.09 L500.00,150.00 L0.00,150.00 Z"
-            style={{ stroke: "none", fill: "#F5F5F5" }}
+            style={{
+              stroke: "none",
+              fill:
+                localStorage.getItem("theme") === "dark" ? "#0f172a" : "#fff",
+            }}
           ></path>
         </svg>
       </div>
